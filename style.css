@@ -63,6 +63,7 @@ a {
   border: none;
   border-radius: 4px;
   transition: all 200ms ease-out;
+  color: black;
 }
 
 .periodicTable *:hover {
