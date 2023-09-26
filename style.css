@@ -18,20 +18,19 @@
   margin: 0;
 }
 
-.nav_bar {
+.navBar {
   list-style-type: none;
   margin: 13px;
   padding: 5px;
   overflow: hidden;
   background-color: transparent;
-  
 }
 
-li {
+.navItem {
   float: left;
 }
 
-li a {
+.navItem a {
   display: block;
   color: white;
   text-align: center;
@@ -41,8 +40,9 @@ li a {
   text-decoration: none;
 }
 
-li a:hover {
+.navItem a:hover {
   background-color: #111;
+  border-radius: 12px;
 }
 
 body {
@@ -51,7 +51,7 @@ body {
   font-family: Arial, Helvetica, sans-serif;
 }
 
-a {
+.footerLink {
   text-decoration: none;
   color: var(--blue);
 }
@@ -96,6 +96,10 @@ a {
 .periodicTable *:hover {
   transform: scale(1.125);
   box-shadow: 0 0 20px 10px var(--black);
+}
+
+header {
+  position: absolute;
 }
 
 .pink {
