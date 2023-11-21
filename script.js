@@ -95,17 +95,22 @@ const elements = [
 
 document.addEventListener('DOMContentLoaded', () => {
   const periodicTable = document.querySelector('.periodicTable');
+  const periodNumbers = document.querySelector('.periodNumbers');
 
   elements.forEach((element) => {
+    // Check if the current column is the first column and add the period number
+    if (element.col === 1) {
+      const periodNumber = document.createElement('div');
+      periodNumber.textContent = element.row;
+      periodNumbers.appendChild(periodNumber);
+    }
+
     const thing = document.createElement('button');
     thing.className = element.symbol + ' ' + element.color;
     thing.id = 'button-' + element.symbol.toLowerCase();
     thing.textContent = element.symbol;
     thing.style.gridRow = element.row;
     thing.style.gridColumn = element.col;
-    thing.onclick = () => {
-      window.open(l + element.link, '_blank');
-    };
 
     periodicTable.appendChild(thing);
   });
